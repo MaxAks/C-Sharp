@@ -1,0 +1,35 @@
+using System;
+
+
+// для работы с текстом отсюда
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.IO;
+// до сюда
+namespace Sandbox
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            
+                
+            string path = @"/Volumes/Tom D/Test.txt";
+            Console.WriteLine("Считываем весь файл");
+            StreamReader sr = new StreamReader(path);
+            {
+                // sr.ReadToEnd();
+            }
+            string key = sr.ReadToEnd();
+            // Console.WriteLine(key);
+            Console.WriteLine("Валерия, введите любое слово чтобы проверить что писал ваш муж про вас");
+            string line = Console.ReadLine();
+
+            if (key.Contains(line)) Console.WriteLine("Поздравляю тебя Валерия, твой муж написал что ты " + line);
+            else Console.WriteLine("Увы, Валерия, но твой муж не написал что ты " + line);
+        }
+     }
+ }
