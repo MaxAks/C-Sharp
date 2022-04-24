@@ -10,9 +10,9 @@ public class MainClass
 
         // Ваш код
 
-        while (startValue <= 1)
+       if (startValue <= 1)
         {
-            startValue++;
+            startValue = 2;
         }
         for (int i = startValue; i <= endValue; i++)
         {
