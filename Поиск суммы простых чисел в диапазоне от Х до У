@@ -1,0 +1,42 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int startValue = int.Parse(Console.ReadLine());
+        int endValue = int.Parse(Console.ReadLine());
+        int sum = 0;
+
+        // Ваш код
+
+        while (startValue <= 1)
+        {
+            startValue++;
+        }
+        for (int i = startValue; i <= endValue; i++)
+        {
+            bool b = true;
+            for (int j = 2; j < i; j++)
+            {
+                if (i % j == 0 || i % endValue ==0)
+                {
+                    b = false;
+                    //Console.WriteLine($"Я считаю здесь = {sum}");
+                }
+            }
+            if (b)
+            {
+                sum = sum + i;
+                //Console.WriteLine($"Сумма сейчас равна = {sum}");
+            }
+
+            // ПРавим что выше
+
+            //Console.WriteLine($"Досчитали = {count}");
+            //Console.WriteLine($"Число по порядку счетчика = {startValue}");
+            
+        }
+        Console.WriteLine($"Сумма простых чисел = {sum}");
+    }
+}
