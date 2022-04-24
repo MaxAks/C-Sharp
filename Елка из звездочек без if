@@ -1,0 +1,20 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int star = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= star; i++)
+        {
+            String repeatedStar = new String('*', i); // переменная принимает значение количества  повторяющихся счетчика цикла
+            String repeatedSpase = new String(' ', star-i); // переменная принимает значение количества  повторяющихся счетчика цикла
+            String repeatedStarMir = new String('*', i - 1); // переменная принимает значение количества  повторяющихся счетчика цикла
+            Console.Write(repeatedSpase);
+            Console.Write(repeatedStarMir);
+            Console.Write(repeatedStar);
+            Console.Write("\n"); // строка печатет перенос строки
+        }
+    }
+}
