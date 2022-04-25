@@ -1,0 +1,25 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int num = int.Parse(Console.ReadLine());
+
+        int count = 0;
+        int fact = 1;
+        if (num==0)
+        {
+            Console.WriteLine("0");
+        }
+        while (count < num)
+        {
+            
+            count++ ;
+            fact = fact*count ;
+        }
+        Console.WriteLine(fact);      
+
+
+    }
+}
