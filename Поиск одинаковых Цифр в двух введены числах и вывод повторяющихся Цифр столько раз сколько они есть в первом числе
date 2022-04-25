@@ -1,0 +1,287 @@
+using System;
+using System.Linq; // Вызов метода для использования Count
+
+public class MainClass
+{
+    public static void Main()
+    {
+        int firstNumber = int.Parse(Console.ReadLine());
+        int secondNumber = int.Parse(Console.ReadLine());
+
+        
+
+        string NumberFirst = firstNumber.ToString(); // Переводим первое число в строку
+
+        string NumberSecond = secondNumber.ToString(); // Переводим второе число в строку
+
+        int f1 = NumberFirst.Length; // считает количество символов в первом числе
+        int f2 = NumberSecond.Length; // считает количество символов во втором числе
+
+        bool
+            // Переменные для проверки наличия опреденного числа в строке для первого числа
+            result0 = false,
+            result1 = false,
+            result2 = false,
+            result3 = false,
+            result4 = false,
+            result5 = false,
+            result6 = false,
+            result7 = false,
+            result8 = false,
+            result9 = false,
+
+        // Переменные для проверки наличия опреденного числа в строке для второго числа
+            result10 = false,
+            result11 = false,
+            result12 = false,
+            result13 = false,
+            result14 = false,
+            result15 = false,
+            result16 = false,
+            result17 = false,
+            result18 = false,
+            result19 = false;
+
+
+        // Переменные считают количество повторяющихся ЦИФР в первом числе
+        int count0 = NumberFirst.ToCharArray().Where(r=> r == '0').Count();
+        int count1 = NumberFirst.ToCharArray().Where(r => r == '1').Count();
+        int count2 = NumberFirst.ToCharArray().Where(r => r == '2').Count();
+        int count3 = NumberFirst.ToCharArray().Where(r => r == '3').Count();
+        int count4 = NumberFirst.ToCharArray().Where(r => r == '4').Count();
+        int count5 = NumberFirst.ToCharArray().Where(r => r == '5').Count();
+        int count6 = NumberFirst.ToCharArray().Where(r => r == '6').Count();
+        int count7 = NumberFirst.ToCharArray().Where(r => r == '7').Count();
+        int count8 = NumberFirst.ToCharArray().Where(r => r == '8').Count();
+        int count9 = NumberFirst.ToCharArray().Where(r => r == '9').Count();
+
+        // Переменные считают количество повторяющихся ЦИФР во втором числе
+        int count10 = NumberSecond.ToCharArray().Where(r => r == '0').Count();
+        int count11 = NumberSecond.ToCharArray().Where(r => r == '1').Count();
+        int count12 = NumberSecond.ToCharArray().Where(r => r == '2').Count();
+        int count13 = NumberSecond.ToCharArray().Where(r => r == '3').Count();
+        int count14 = NumberSecond.ToCharArray().Where(r => r == '4').Count();
+        int count15 = NumberSecond.ToCharArray().Where(r => r == '5').Count();
+        int count16 = NumberSecond.ToCharArray().Where(r => r == '6').Count();
+        int count17 = NumberSecond.ToCharArray().Where(r => r == '7').Count();
+        int count18 = NumberSecond.ToCharArray().Where(r => r == '8').Count();
+        int count19 = NumberSecond.ToCharArray().Where(r => r == '9').Count();
+
+        // Проверяем первое число
+        if (count0 > 0)
+            result0 = true;
+
+        if (count1 > 0)
+            result1 = true;
+
+        if (count2 > 0)
+            result2 = true;
+
+        if (count3 > 0)
+            result3 = true;
+
+        if (count4 > 0)
+            result4 = true;
+
+        if (count5 > 0)
+            result5 = true;
+
+        if (count6 > 0)
+            result6 = true;
+
+        if (count7 > 0)
+            result7 = true;
+
+        if (count8 > 0)
+            result8 = true;
+
+        if (count9 > 0)
+            result9 = true;
+
+        // Проверяем Второе число
+        if (count10 > 0)
+            result10 = true;
+
+        if (count11 > 0)
+            result11 = true;
+
+        if (count12 > 0)
+            result12 = true;
+
+        if (count13 > 0)
+            result13 = true;
+
+        if (count14 > 0)
+            result14 = true;
+
+        if (count15 > 0)
+            result15 = true;
+
+        if (count16 > 0)
+            result16 = true;
+
+        if (count17 > 0)
+            result17 = true;
+
+        if (count18 > 0)
+            result18 = true;
+
+        if (count19 > 0)
+            result19 = true;
+
+        //Проверяем наличие одинаковых чисел в двух исходных числах
+
+       
+        // ДЛЯ цифры 0
+        if (result0 & result10)
+            for (int i = 0; i < count0; i++)
+            {
+                if (i < count0 - 1)
+                { Console.Write("0 "); }
+                else
+                { Console.Write("0"); }
+                // выключаем сравнение остальных цифр как только нашли овторяющийся НОЛЬ
+                result1 = false;
+                result2 = false;
+                result3 = false;
+                result4 = false;
+                result5 = false;
+                result6 = false;
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+
+        // ДЛЯ цифры 1
+        if (result1 & result11)
+            for (int i = 0; i < count1; i++)
+            {
+                if (i < count1 - 1)
+                { Console.Write("1 "); }
+                else
+                {
+                    Console.Write("1");
+                }
+                    result2 = false;
+                    result3 = false;
+                    result4 = false;
+                    result5 = false;
+                    result6 = false;
+                    result7 = false;
+                    result8 = false;
+                    result9 = false;
+                }
+
+
+        // ДЛЯ цифры 2
+        if (result2 & result12)
+            for (int i = 0; i < count2; i++)
+            {
+                if (i < count2 - 1)
+                    Console.Write("2 ");
+                else
+                    Console.Write("2");
+                result3 = false;
+                result4 = false;
+                result5 = false;
+                result6 = false;
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+        // ДЛЯ цифры 3
+        if (result3 & result13)
+            for (int i = 0; i < count3; i++)
+            {
+                if (i < count3 - 1)
+                    Console.Write("3 ");
+                else
+                    Console.Write("3");
+                result4 = false;
+                result5 = false;
+                result6 = false;
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+
+        // ДЛЯ цифры 4
+        if (result4 & result14)
+            for (int i = 0; i < count4; i++)
+            {
+                if (i < count4 - 1)
+                    Console.Write("4 ");
+                else
+                    Console.Write("4");
+                result5 = false;
+                result6 = false;
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+        // ДЛЯ цифры 5
+        if (result5 & result15)
+            for (int i = 0; i < count5; i++)
+            {
+                if (i < count5 - 1)
+                    Console.Write("5 ");
+                else
+                    Console.Write("5");
+                result6 = false;
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+
+        // ДЛЯ цифры 6
+        if (result6 & result16)
+            for (int i = 0; i < count6; i++)
+            {
+                if (i < count6 - 1)
+                    Console.Write("6 ");
+                else
+                    Console.Write("6");
+                result7 = false;
+                result8 = false;
+                result9 = false;
+            }
+
+        // ДЛЯ цифры 7
+        if (result7 & result17)
+            for (int i = 0; i < count7; i++)
+            {
+                if (i < count7 - 1)
+                    Console.Write("7 ");
+                else
+                    Console.Write("7");
+                result8 = false;
+                result9 = false;
+            }
+
+        // ДЛЯ цифры 8
+        if (result8 & result18)
+            for (int i = 0; i < count8; i++)
+            {
+                if (i < count8 - 1)
+                    Console.Write("8 ");
+                else
+                    Console.Write("8");
+                result9 = false;
+            }
+
+        // ДЛЯ цифры 9
+        if (result9 & result19)
+            for (int i = 0; i < count9; i++)
+            {
+                if (i < count9 - 1)
+                    Console.Write("9 ");
+                else
+                    Console.Write("9");
+            }
+    }
+}
