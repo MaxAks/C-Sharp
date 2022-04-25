@@ -15,6 +15,7 @@ public class MainClass
             Console.Write(repeatedStarMir);
             Console.Write(repeatedStar);
             Console.Write("\n"); // строка печатет перенос строки
+            
         }
     }
 }
