@@ -1,0 +1,16 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {      
+        int height = int.Parse(Console.ReadLine());
+        
+        for(int i = 1;i<=height;i++){
+            string s = new string(' ',height-i);
+            s += new string('*',1+(2*(i-1)));
+            Console.WriteLine(s);
+        }
+
+    }
+}
