@@ -1,0 +1,15 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        char[] firstNumber = Console.ReadLine().ToCharArray();
+        char[] secondNumber = Console.ReadLine().ToCharArray();
+        foreach(char item in firstNumber)
+        {
+          if(Array.IndexOf(secondNumber, item) > -1)
+            Console.Write(item + " ");
+        }
+    }
+}
