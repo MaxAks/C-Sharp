@@ -1,0 +1,18 @@
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+
+        int number = int.Parse(Console.ReadLine());
+        for (; number > 1;)// ОБРАТИТЬ ВНИМАНИЕ, ЧТО КОНСТРУКЦИЯ FOR требует синтаксиса с точкой запятой для указания только условий
+        {
+            if (number % 2 == 0)
+                number = number / 2;
+            else
+                number = number*3 + 1;
+        }
+        Console.WriteLine(number);
+    }
+}
